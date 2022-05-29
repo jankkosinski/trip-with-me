@@ -13,3 +13,28 @@
   align-items: $align;
   height: $height;
 }
+@mixin button(
+  $color_primary,
+  $color_secondary,
+  $text_color,
+  $height,
+  $font_size,
+  $bfr,
+  $padding_vertical,
+  $padding_horizontal
+) {
+  background: linear-gradient(to right, $color_primary, $color_secondary);
+  color: $text_color;
+  text-decoration: none;
+  height: $height;
+  line-height: 4.5rem;
+  display: inline-block;
+  font-size: $font_size;
+  font-weight: 400;
+  border-radius: $bfr;
+  padding: $padding_vertical $padding_horizontal;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}

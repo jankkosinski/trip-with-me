@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Header>
-        <button>Get Started</button>
+        <button className='btn-default'>Get Started</button>
       </Header>
     </>
   );

@@ -1,0 +1,14 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+.btn-default {
+  @include mixins.button(
+    variables.$primary,
+    variables.$secondary,
+    variables.$white,
+    4.5rem,
+    1.4rem,
+    5rem,
+    0,
+    2rem
+  );
+}
