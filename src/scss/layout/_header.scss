@@ -22,14 +22,17 @@
           font-weight: 900;
           font-size: 4.2rem;
           line-height: 2.8rem;
+          @include mixins.animation(heading-title, 1s, ease-in, null, -8rem);
         }
         &__p {
           margin-top: 0.8rem;
           color: variables.$white;
           font-size: 1.5rem;
+          @include mixins.animation(heading-text, 1s, ease-out, -10rem, null);
         }
         &__link {
           margin-top: 0.8rem;
+          @include mixins.animation(heading-button, 1s, ease-out, -8rem, null);
         }
       }
     }
