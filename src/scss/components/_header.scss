@@ -5,6 +5,7 @@
     position: relative;
     overflow: hidden;
     &__video {
-        @include mixins.position(absolute, 0, 0, null, null, 100%, null)
+        @include mixins.position(absolute, 0, 0, null, null, 100%, null);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
 }
