@@ -15,12 +15,14 @@ export default function Header({ children }) {
         muted
       ></video>
       <div className='header__contents'>
-        <div className='header__contents__text'>
-          <div className='header__contents__text__child'>
-            <h1 className='header__contents__text__child__h1'>{title}</h1>
-            <p className='header__contents__text__child__p'>{intro_text}</p>
-            <div className='header__contents__text__child__link'>
-              {children}
+        <div className='container'>
+          <div className='header__contents__text'>
+            <div className='header__contents__text__child'>
+              <h1 className='header__contents__text__child__h1'>{title}</h1>
+              <p className='header__contents__text__child__p'>{intro_text}</p>
+              <div className='header__contents__text__child__link'>
+                {children}
+              </div>
             </div>
           </div>
         </div>

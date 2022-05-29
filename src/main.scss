@@ -1,3 +1,6 @@
 @use 'scss/base/base';
+// import layouts
+@use 'scss/layout/header';
 // import components
-@use 'scss/components/header';
+@use 'scss/components/containers';
+@use 'scss/components/buttons';
