@@ -1,9 +1,15 @@
 @mixin position($position, $top, $left, $bottom, $right, $width, $height) {
-    position: $position;
-    top: $top;
-    left: $left;
-    bottom: $bottom;
-    right: $right;
-    width: $width;
-    height: $height;
+  position: $position;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+  width: $width;
+  height: $height;
+}
+@mixin align($display, $justify, $align, $height) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+  height: $height;
 }

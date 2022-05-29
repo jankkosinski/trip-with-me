@@ -4,7 +4,9 @@ import Header from '../components/Header';
 export default function Home() {
   return (
     <>
-      <Header></Header>
+      <Header>
+        <button>Get Started</button>
+      </Header>
     </>
   );
 }
