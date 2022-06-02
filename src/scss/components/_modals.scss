@@ -1,0 +1,13 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+.modal {
+  @include mixins.position(fixed, 0, 0, 0, 0, 100%, 100%);
+  @include mixins.align(flex, center, center, null);
+  background-color: rgb(0, 0, 0, 0.5);
+  &__body {
+    background: variables.$white;
+    width: 38rem;
+    height: auto;
+    font-size: 1.4rem;
+  }
+}
