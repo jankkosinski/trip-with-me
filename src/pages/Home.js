@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import SignModal from '../components/SignModal';
+import SignModalContext from '../context/SignModalContext';
 import Header from '../layout/Header';
-import SignModal from '../layout/SignModal';
 
 export default function Home() {
+  const { openModal } = useContext(SignModalContext);
   return (
     <>
       <Header>
-        <button className='btn-default'>Get Started</button>
+        <button className='btn-default' onClick={openModal}>
+          Get Started
+        </button>
       </Header>
       <SignModal></SignModal>
     </>
