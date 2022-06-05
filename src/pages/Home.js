@@ -4,11 +4,14 @@ import SignModalContext from '../context/SignModalContext';
 import Header from '../layout/Header';
 
 export default function Home() {
-  const { openModal } = useContext(SignModalContext);
+  const { dispatch } = useContext(SignModalContext);
   return (
     <>
       <Header>
-        <button className='btn-default' onClick={openModal}>
+        <button
+          className='btn-default'
+          onClick={() => dispatch({ type: 'OPEN_MODAL' })}
+        >
           Get Started
         </button>
       </Header>
