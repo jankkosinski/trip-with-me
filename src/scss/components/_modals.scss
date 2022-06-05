@@ -8,5 +8,6 @@
     width: 38rem;
     height: auto;
     font-size: 1.4rem;
+    @include utilities.animation(modalAnimation, 0.5s, linear, null, -5rem);
   }
 }
