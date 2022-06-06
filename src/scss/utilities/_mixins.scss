@@ -13,6 +13,11 @@
   align-items: $align;
   height: $height;
 }
+@mixin flex($display, $direction, $gap, $justify, $align, $height) {
+  @include align($display, $justify, $align, $height);
+  flex-direction: $direction;
+  gap: $gap;
+}
 @mixin button(
   $color_primary,
   $color_secondary,
@@ -27,7 +32,6 @@
   color: $text_color;
   text-decoration: none;
   height: $height;
-  line-height: 4.5rem;
   display: inline-block;
   font-size: $font_size;
   font-weight: 400;
