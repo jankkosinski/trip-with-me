@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import SignModal from '../components/SignModal';
 import SignModalContext from '../context/SignModalContext';
+import { OPEN_MODAL } from '../context/types/SignModalTypes';
 import Header from '../layout/Header';
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
       <Header>
         <button
           className='btn-default'
-          onClick={() => dispatch({ type: 'OPEN_MODAL' })}
+          onClick={() => dispatch({ type: OPEN_MODAL })}
         >
           Get Started
         </button>
