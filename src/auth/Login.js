@@ -1,14 +1,27 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import SignModalContext from '../context/SignModalContext';
-import { OPEN_MODAL, PAYLOAD } from '../context/types/SignModalTypes';
+import {
+  CLOSE_MODAL,
+  OPEN_MODAL,
+  PAYLOAD,
+} from '../context/types/SignModalTypes';
 
 export default function Login() {
   const title = 'Login';
   const submit = 'Sign In';
   const link_text = 'Create new account';
+  const [state, setState] = useState({
+    email: '',
+    password: '',
+  });
   const { dispatch } = useContext(SignModalContext);
+  const submitRegisterForm = (e) => {
+    e.preventDefault();
+    console.log(state);
+    dispatch({ type: CLOSE_MODAL });
+  };
   return (
-    <form className='fade-form'>
+    <form className='fade-form' onSubmit={submitRegisterForm}>
       <div className='modal__heading'>
         <h3>{title}</h3>
       </div>
@@ -19,6 +32,10 @@ export default function Login() {
             name='email'
             className='control__input'
             placeholder='Enter email'
+            onChange={(e) =>
+              setState((prevState) => ({ ...prevState, email: e.target.value }))
+            }
+            value={state.email}
           />
         </div>
         <div className='control'>
@@ -27,10 +44,19 @@ export default function Login() {
             name='password'
             className='control__input'
             placeholder='Enter password'
+            onChange={(e) =>
+              setState((prevState) => ({
+                ...prevState,
+                password: e.target.value,
+              }))
+            }
+            value={state.password}
           />
         </div>
         <div className='control'>
-          <button className='btn-submit control__full'>{submit}</button>
+          <button type='submit' className='btn-submit control__full'>
+            {submit}
+          </button>
           <div
             className='control__link'
             onClick={() =>
