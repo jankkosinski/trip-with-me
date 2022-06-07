@@ -8,7 +8,7 @@ export default function Register() {
   const link_text = 'Already you have an account?';
   const { dispatch } = useContext(SignModalContext);
   return (
-    <form>
+    <form className='fade-form'>
       <div className='modal__heading'>
         <h3>{title}</h3>
       </div>

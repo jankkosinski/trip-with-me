@@ -1,4 +1,7 @@
 @use '../utilities';
+.fade-form {
+  @include utilities.animation-fade-in(form-fade-in, 0.5s, linear);
+}
 .control {
   width: 100%;
   margin: 0.4rem;

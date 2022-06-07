@@ -17,7 +17,13 @@
     width: 52rem;
     height: auto;
     font-size: 1.4rem;
-    @include utilities.animation(modalAnimation, 0.5s, linear, null, -5rem);
+    @include utilities.animation-translate(
+      modalAnimation,
+      0.2s,
+      linear,
+      null,
+      -5rem
+    );
   }
   &__groups {
     @include utilities.flex(flex, column, null, center, center, null);

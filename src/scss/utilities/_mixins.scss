@@ -46,13 +46,30 @@
     opacity: 0.8;
   }
 }
-@mixin animation($name, $duration, $function, $translateX, $translate) {
+@mixin animation-fade-in($name, $duration, $function) {
+  animation: $name $duration $function;
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+@mixin animation-translate(
+  $name,
+  $duration,
+  $function,
+  $translateX,
+  $translateY
+) {
   animation: $name $duration $function;
   @keyframes #{$name} {
     0% {
       opacity: 0;
       transform: translateX($translateX);
-      transform: translateY($translate);
+      transform: translateY($translateY);
     }
     100% {
       opacity: 1;
