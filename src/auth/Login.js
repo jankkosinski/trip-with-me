@@ -1,23 +1,15 @@
 import React from 'react';
 
-export default function Register() {
-  const title = 'Create new account';
-  const submit = 'Sign Up';
-  const link_text = 'Already you have an account?';
+export default function Login() {
+  const title = 'Login';
+  const submit = 'Sign In';
+  const link_text = 'Create new account';
   return (
     <form>
       <div className='modal__heading'>
         <h3>{title}</h3>
       </div>
       <div className='modal__groups'>
-        <div className='control'>
-          <input
-            type='text'
-            name='name'
-            className='control__input'
-            placeholder='Enter name'
-          />
-        </div>
         <div className='control'>
           <input
             type='email'
@@ -31,7 +23,7 @@ export default function Register() {
             type='password'
             name='password'
             className='control__input'
-            placeholder='Create password'
+            placeholder='Enter password'
           />
         </div>
         <div className='control'>

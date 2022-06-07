@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Login from '../auth/Login';
 import Register from '../auth/Register';
 import SignModal from '../components/SignModal';
 import SignModalContext from '../context/SignModalContext';
@@ -20,6 +21,9 @@ export default function Home() {
       </Header>
       <SignModal>
         <Register></Register>
+      </SignModal>
+      <SignModal>
+        <Login></Login>
       </SignModal>
     </>
   );
