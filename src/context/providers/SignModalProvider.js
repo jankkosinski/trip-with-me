@@ -5,6 +5,7 @@ import SignModalContext from '../SignModalContext';
 export default function SignModalProvider({ children }) {
   const [state, dispatch] = useReducer(SignModalReducer, {
     modalStatus: false,
+    payload: '',
   });
 
   return (

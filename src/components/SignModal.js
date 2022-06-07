@@ -2,13 +2,13 @@ import React, { useContext } from 'react';
 import SignModalContext from '../context/SignModalContext';
 import { CLOSE_MODAL } from '../context/types/SignModalTypes';
 
-export default function SignModal({ children }) {
+export default function SignModal({ children, payload }) {
   const { state, dispatch } = useContext(SignModalContext);
   const close = (e) => {
     if (e.target.getAttribute('class') === 'modal')
       dispatch({ type: CLOSE_MODAL });
   };
-  return state.modalStatus ? (
+  return state.modalStatus && state.payload === payload ? (
     <div className='modal' onClick={close}>
       <div className='modal__body'>{children}</div>
     </div>

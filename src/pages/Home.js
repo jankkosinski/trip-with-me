@@ -3,7 +3,7 @@ import Login from '../auth/Login';
 import Register from '../auth/Register';
 import SignModal from '../components/SignModal';
 import SignModalContext from '../context/SignModalContext';
-import { OPEN_MODAL } from '../context/types/SignModalTypes';
+import { OPEN_MODAL, PAYLOAD } from '../context/types/SignModalTypes';
 import Header from '../layout/Header';
 
 export default function Home() {
@@ -14,15 +14,15 @@ export default function Home() {
       <Header>
         <button
           className='btn-start'
-          onClick={() => dispatch({ type: OPEN_MODAL })}
+          onClick={() => dispatch({ type: OPEN_MODAL, payload: PAYLOAD.login })}
         >
           {title}
         </button>
       </Header>
-      <SignModal>
+      <SignModal payload={PAYLOAD.register}>
         <Register></Register>
       </SignModal>
-      <SignModal>
+      <SignModal payload={PAYLOAD.login}>
         <Login></Login>
       </SignModal>
     </>

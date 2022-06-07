@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import SignModalContext from '../context/SignModalContext';
+import { OPEN_MODAL, PAYLOAD } from '../context/types/SignModalTypes';
 
 export default function Login() {
   const title = 'Login';
   const submit = 'Sign In';
   const link_text = 'Create new account';
+  const { dispatch } = useContext(SignModalContext);
   return (
     <form>
       <div className='modal__heading'>
@@ -28,7 +31,14 @@ export default function Login() {
         </div>
         <div className='control'>
           <button className='btn-submit control__full'>{submit}</button>
-          <div className='control__link'>{link_text}</div>
+          <div
+            className='control__link'
+            onClick={() =>
+              dispatch({ type: OPEN_MODAL, payload: PAYLOAD.register })
+            }
+          >
+            {link_text}
+          </div>
         </div>
       </div>
     </form>
