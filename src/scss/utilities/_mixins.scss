@@ -13,6 +13,11 @@
   align-items: $align;
   height: $height;
 }
+@mixin flex($display, $direction, $gap, $justify, $align, $height) {
+  @include align($display, $justify, $align, $height);
+  flex-direction: $direction;
+  gap: $gap;
+}
 @mixin button(
   $color_primary,
   $color_secondary,
@@ -27,7 +32,6 @@
   color: $text_color;
   text-decoration: none;
   height: $height;
-  line-height: 4.5rem;
   display: inline-block;
   font-size: $font_size;
   font-weight: 400;
@@ -42,13 +46,30 @@
     opacity: 0.8;
   }
 }
-@mixin animation($name, $duration, $function, $translateX, $translate) {
+@mixin animation-fade-in($name, $duration, $function) {
+  animation: $name $duration $function;
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+@mixin animation-translate(
+  $name,
+  $duration,
+  $function,
+  $translateX,
+  $translateY
+) {
   animation: $name $duration $function;
   @keyframes #{$name} {
     0% {
       opacity: 0;
       transform: translateX($translateX);
-      transform: translateY($translate);
+      transform: translateY($translateY);
     }
     100% {
       opacity: 1;
