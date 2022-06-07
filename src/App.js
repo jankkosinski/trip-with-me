@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignModalProvider from './context/providers/SignModalProvider';
+import Navigation from './layout/Navigation';
 import About from './pages/About';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
@@ -8,6 +9,7 @@ function App() {
   return (
     <Router>
       <SignModalProvider>
+        <Navigation></Navigation>
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/about' element={<About></About>}></Route>

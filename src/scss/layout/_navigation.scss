@@ -1,0 +1,18 @@
+@use '../utilities';
+.nav {
+  @include utilities.position(fixed, 0, 0, 0, 0, 100%, 100%);
+  background-color: rgb(0, 0, 0, 0.5);
+  z-index: 5;
+  &__content {
+    @include utilities.position(fixed, 0, null, 0, 0, null, 100%);
+    @include utilities.flex(flex, column, 1.5rem, center, center, null);
+    background-color: utilities.$white;
+    width: 25%;
+    @media screen and (max-width: utilities.$small-view) {
+      width: 100%;
+    }
+    @media screen and (min-width: utilities.$small-view) and (max-width: utilities.$medium-view) {
+      width: 40%;
+    }
+  }
+}
