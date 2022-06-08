@@ -14,5 +14,40 @@
     @media screen and (min-width: utilities.$small-view) and (max-width: utilities.$medium-view) {
       width: 40%;
     }
+    &__link {
+      display: block;
+      @include utilities.position(relative, null, null, null, null, 100%, auto);
+      padding: 1.5rem;
+      text-decoration: none;
+      text-align: center;
+      color: utilities.$black;
+      font-size: 1.6rem;
+      font-weight: 400;
+      transition: 0.5s;
+      &:before {
+        @include utilities.position(absolute, 0, 0, 0, 0, 100%, 100%);
+        content: '';
+        background: linear-gradient(
+          to right,
+          utilities.$primary,
+          utilities.$secondary
+        );
+        z-index: -1;
+        transform: scale(0);
+        transition: 0.5s;
+      }
+      &:hover {
+        color: utilities.$white;
+      }
+      &:hover:before {
+        transform: scale(1);
+      }
+    }
+    .active {
+      color: utilities.$primary;
+      &:hover {
+        color: utilities.$white;
+      }
+    }
   }
 }
