@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 import NavContext from '../context/NavContext';
 
 export default function Navigation() {
-  const { state, dispatch } = useContext(NavContext);
+  const { state } = useContext(NavContext);
   console.log(state);
-  return state ? (
+  return (
     <>
-      <div className='nav'>
-        <div className='nav__content'>
+      <div className={`nav ${state ? '' : 'nav--closed'}`}>
+        <div className={`nav__content ${state ? '' : 'nav__content--closed'}`}>
           <NavLink className='nav__content__link' to='/'>
             Home
           </NavLink>
@@ -18,5 +18,5 @@ export default function Navigation() {
         </div>
       </div>
     </>
-  ) : null;
+  );
 }
