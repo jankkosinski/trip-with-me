@@ -5,7 +5,7 @@ import NavReducer from '../reducers/NavReducer';
 export default function NavProvider({ children }) {
   const [state, dispatch] = useReducer(NavReducer, false);
   return (
-    <NavContext.Provider value={(state, dispatch)}>
+    <NavContext.Provider value={{ state, dispatch }}>
       {children}
     </NavContext.Provider>
   );
