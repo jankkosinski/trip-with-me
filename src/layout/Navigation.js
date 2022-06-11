@@ -4,7 +4,8 @@ import NavContext from '../context/NavContext';
 
 export default function Navigation() {
   const { state, dispatch } = useContext(NavContext);
-  return (
+  console.log(state);
+  return state ? (
     <>
       <div className='nav'>
         <div className='nav__content'>
@@ -17,5 +18,5 @@ export default function Navigation() {
         </div>
       </div>
     </>
-  );
+  ) : null;
 }
