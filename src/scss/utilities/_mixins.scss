@@ -23,6 +23,7 @@
   $color_secondary,
   $text_color,
   $height,
+  $width,
   $font_size,
   $bfr,
   $padding_vertical,
@@ -32,6 +33,7 @@
   color: $text_color;
   text-decoration: none;
   height: $height;
+  width: $width;
   display: inline-block;
   font-size: $font_size;
   font-weight: 400;

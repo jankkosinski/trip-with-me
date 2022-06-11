@@ -6,6 +6,7 @@
   transition: all 0.3s linear;
   &--closed {
     opacity: 0;
+    z-index: -1;
   }
   &__content {
     @include utilities.position(fixed, 0, null, 0, 0, null, 100%);
@@ -59,7 +60,7 @@
     }
   }
   &__toggle {
-    @include utilities.position(fixed, 0, null, null, 0, 5rem, 5rem);
+    @include utilities.position(fixed, 0, null, null, 0, null, null);
     z-index: 10;
     padding: 1.5rem;
   }

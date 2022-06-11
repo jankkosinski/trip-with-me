@@ -6,7 +6,14 @@ export default function NavToggleButton() {
   const { state, dispatch } = useContext(NavContext);
   return (
     <div className='nav__toggle'>
-      <button onClick={() => dispatch({ type: NAV_TOGGLE })}>+</button>
+      <button
+        className='btn-nav'
+        onClick={() => dispatch({ type: NAV_TOGGLE })}
+      >
+        <span className={`btn-nav__line ${!state ? '' : 'close'}`}></span>
+        <span className={`btn-nav__line ${!state ? '' : 'close'}`}></span>
+        <span className={`btn-nav__line ${!state ? '' : 'close'}`}></span>
+      </button>
     </div>
   );
 }
