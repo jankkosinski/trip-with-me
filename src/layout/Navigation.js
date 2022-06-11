@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import NavContext from '../context/NavContext';
 
 export default function Navigation() {
+  const { state, dispatch } = useContext(NavContext);
   return (
     <>
       <div className='nav'>
