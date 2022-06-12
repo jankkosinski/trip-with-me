@@ -13,12 +13,18 @@
     @include utilities.flex(flex, column, 1.5rem, center, center, null);
     background-color: utilities.$white;
     transition: all 0.2s ease-in;
-    width: 25%;
-    @media screen and (max-width: utilities.$small-view) {
-      width: 100%;
+    width: 20%;
+    @include utilities.responsive(large) {
+      width: 25%;
     }
-    @media screen and (min-width: utilities.$small-view) and (max-width: utilities.$medium-view) {
+    @include utilities.responsive(medium) {
+      width: 30%;
+    }
+    @include utilities.responsive(small) {
       width: 40%;
+    }
+    @include utilities.responsive(xsmall) {
+      width: 100%;
     }
     &--closed {
       transform: translateX(100%);

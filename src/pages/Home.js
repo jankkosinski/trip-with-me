@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import SignModal from '../components/SignModal';
 import SignModalContext from '../context/SignModalContext';
 import { OPEN_MODAL, PAYLOAD } from '../context/types/SignModalTypes';
+import Destinations from '../layout/Destinations';
 import Header from '../layout/Header';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         </button>
       </Header>
       <SignModal></SignModal>
+      <Destinations></Destinations>
     </>
   );
 }
