@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavToggleButton from './components/NavToggleButton';
+import DestinationsProvider from './context/providers/DestinationsProvider';
 import NavProvider from './context/providers/NavProvider';
 import SignModalProvider from './context/providers/SignModalProvider';
 import Navigation from './layout/Navigation';
@@ -12,13 +13,15 @@ function App() {
     <Router>
       <SignModalProvider>
         <NavProvider>
-          <NavToggleButton></NavToggleButton>
-          <Navigation></Navigation>
-          <Routes>
-            <Route path='/' element={<Home></Home>}></Route>
-            <Route path='/about' element={<About></About>}></Route>
-            <Route path='*' element={<NotFound></NotFound>}></Route>
-          </Routes>
+          <DestinationsProvider>
+            <NavToggleButton></NavToggleButton>
+            <Navigation></Navigation>
+            <Routes>
+              <Route path='/' element={<Home></Home>}></Route>
+              <Route path='/about' element={<About></About>}></Route>
+              <Route path='*' element={<NotFound></NotFound>}></Route>
+            </Routes>
+          </DestinationsProvider>
         </NavProvider>
       </SignModalProvider>
     </Router>
