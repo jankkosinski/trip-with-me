@@ -7,6 +7,16 @@
   overflow: hidden;
   &__logo {
     @include utilities.position(absolute, 3rem, 5rem, null, null, 200px, auto);
+    @include utilities.responsive(medium) {
+      top: 2rem;
+      left: 3rem;
+      width: 150px;
+    }
+    @include utilities.responsive(xsmall) {
+      top: 1rem;
+      left: 2rem;
+      width: 100px;
+    }
   }
   &__video {
     @include utilities.position(absolute, 0, 0, null, null, 100%, 100%);
