@@ -4,6 +4,8 @@ This is exapmle project of React application.
 Trip With Me is an multi pages application which is based on such specific tools like Context API, Flexbox and SASS/SCSS.
 This project provides a responsive website that provides information about tours and places to visit.
 
+Project is prepared only with html, css and React. There is no external frameworks for UI. It shows a lot of design topics and information how to screate structure for that applications.
+
 What can you find in this project:
 
 - Learn React JS library from beginners level
@@ -14,7 +16,6 @@ What can you find in this project:
 - Vanilla JavaScript scroll animations
 - Accordion with pure React js
 - Image lazy loading with React js
-- SEO optimized React pages with Helmet
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
