@@ -14,14 +14,17 @@
     background-color: utilities.$white;
     transition: all 0.2s ease-in;
     width: 20%;
-    @media screen and (max-width: utilities.$xsm) {
-      width: 100%;
+    @include utilities.responsive(large) {
+      width: 25%;
     }
-    @media screen and (min-width: utilities.$xsm) and (max-width: utilities.$sm) {
+    @include utilities.responsive(medium) {
+      width: 30%;
+    }
+    @include utilities.responsive(small) {
       width: 40%;
     }
-    @media screen and (min-width: utilities.$sm) and (max-width: utilities.$md) {
-      width: 30%;
+    @include utilities.responsive(xsmall) {
+      width: 100%;
     }
     &--closed {
       transform: translateX(100%);
