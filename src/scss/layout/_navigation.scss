@@ -13,12 +13,15 @@
     @include utilities.flex(flex, column, 1.5rem, center, center, null);
     background-color: utilities.$white;
     transition: all 0.2s ease-in;
-    width: 25%;
-    @media screen and (max-width: utilities.$small-view) {
+    width: 20%;
+    @media screen and (max-width: utilities.$xsm) {
       width: 100%;
     }
-    @media screen and (min-width: utilities.$small-view) and (max-width: utilities.$medium-view) {
+    @media screen and (min-width: utilities.$xsm) and (max-width: utilities.$sm) {
       width: 40%;
+    }
+    @media screen and (min-width: utilities.$sm) and (max-width: utilities.$md) {
+      width: 30%;
     }
     &--closed {
       transform: translateX(100%);
