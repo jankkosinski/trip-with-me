@@ -1,0 +1,11 @@
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@for $num from 1 to 12 {
+  .col-#{$num} {
+    width: 100% / 12 * $num;
+  }
+}
