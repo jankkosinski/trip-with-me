@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdPlace } from 'react-icons/md';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function DestinationCard({ destination }) {
   return (
@@ -9,7 +10,12 @@ export default function DestinationCard({ destination }) {
           alt={destination.image}
           src={destination.image}
         />
-        <div className='destination__card__layer'></div>
+        <div className='destination__card__layer'>
+          <div className='destination__card__layer__content'>
+            <MdPlace />
+            <div>{destination.name}</div>
+          </div>
+        </div>
       </div>
     </div>
   );

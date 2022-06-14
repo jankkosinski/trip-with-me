@@ -44,8 +44,15 @@
     }
     &__layer {
       @include utilities.position(absolute, 0, 0, 0, 0, 100%, 100%);
+      @include utilities.align(flex, center, flex-end, null);
       background: linear-gradient(to bottom, transparent 50%, utilities.$black);
       border-radius: 1.5rem;
+      &__content {
+        @include utilities.flex(flex, row, 0.5rem, center, center, null);
+        padding: 1rem 0;
+        color: utilities.$grey;
+        font-size: 1.5rem;
+      }
     }
   }
 }
