@@ -58,3 +58,19 @@
     width: 2.2rem;
   }
 }
+.btn-basic {
+  @include utilities.button(
+    utilities.$primary,
+    utilities.$secondary,
+    utilities.$white,
+    3rem,
+    null,
+    1.5rem,
+    5rem,
+    0.5rem,
+    2rem
+  );
+  &:hover {
+    opacity: 1;
+  }
+}
