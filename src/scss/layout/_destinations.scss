@@ -59,10 +59,23 @@
       @include utilities.flex(flex, column, null, flex-start, center, null);
       border-radius: 1.5rem;
       padding: 1.5rem;
-      transform: translateY(-4rem);
+      transform: translateY(-5rem);
       transition: all 0.5s;
       &:hover {
         transform: translateY(0);
+        &:after {
+          transform: translateY(-5rem);
+          opacity: 0;
+        }
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: 1.5rem;
+        width: 40%;
+        height: 0.2rem;
+        background: utilities.$primary;
+        transition: all 0.3s;
       }
     }
   }
