@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import DestinationsContext from '../context/DestinationsContext';
 import Header from '../layout/Header';
@@ -14,6 +15,9 @@ export default function Details() {
   console.log(details);
   return (
     <>
+      <Helmet>
+        <title>{details.name}</title>
+      </Helmet>
       <Header
         title={details.name}
         intro_text={''}

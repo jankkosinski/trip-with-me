@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Helmet } from 'react-helmet-async';
 import SignModal from '../components/SignModal';
 import SignModalContext from '../context/SignModalContext';
 import { OPEN_MODAL, PAYLOAD } from '../context/types/SignModalTypes';
@@ -10,6 +11,9 @@ export default function Home() {
   const title = 'Get Started';
   return (
     <>
+      <Helmet>
+        <title>Trip With Me</title>
+      </Helmet>
       <Header>
         <button
           className='btn-start'
