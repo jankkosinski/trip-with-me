@@ -4,7 +4,6 @@ import NavContext from '../context/NavContext';
 
 export default function Navigation() {
   const { state } = useContext(NavContext);
-  console.log(state);
   return (
     <>
       <div className={`nav ${state ? '' : 'nav--closed'}`}>
