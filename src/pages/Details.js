@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import DestinationsContext from '../context/DestinationsContext';
+import DetailsOverview from '../layout/DetailsOverview';
 import Header from '../layout/Header';
 
 export default function Details() {
@@ -25,6 +26,7 @@ export default function Details() {
         poster_path={details.bigImage}
         logo={''}
       ></Header>
+      <DetailsOverview></DetailsOverview>
     </>
   );
 }
