@@ -13,7 +13,6 @@ export default function Details() {
   const details = destinations.find(
     (destination) => destination.id === parseInt(id)
   );
-  console.log(details);
   return (
     <>
       <Helmet>
@@ -26,7 +25,7 @@ export default function Details() {
         poster_path={details.bigImage}
         logo={''}
       ></Header>
-      <DetailsOverview></DetailsOverview>
+      <DetailsOverview details={details}></DetailsOverview>
     </>
   );
 }

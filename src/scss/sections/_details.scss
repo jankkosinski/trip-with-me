@@ -1,0 +1,16 @@
+@use '../utilities';
+.details {
+  margin: 10rem 5rem;
+  &__header {
+    margin-bottom: 4rem;
+    font-size: 3rem;
+    font-weight: 400;
+    background: linear-gradient(
+      to right,
+      utilities.$primary,
+      utilities.$secondary
+    );
+    background-clip: text;
+    color: transparent;
+  }
+}
