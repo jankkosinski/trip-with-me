@@ -8,11 +8,15 @@ import Header from '../layout/Header';
 export default function Details() {
   const { id } = useParams();
   const {
-    state: { destinations },
+    state: { destinations, cities },
   } = useContext(DestinationsContext);
   const destinationData = destinations.find(
     (destination) => destination.id === parseInt(id)
   );
+  const destinationCities = cities.filter(
+    (city) => city.destinationId === destinationData.id
+  );
+  console.log(destinationCities);
   return (
     <>
       <Helmet>
