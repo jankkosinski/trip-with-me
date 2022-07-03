@@ -1,16 +1,32 @@
 import React from 'react';
+import DetailsBasicsBox from '../components/DetailsBasicsBox';
 
 export default function DetailsOverview({ destination }) {
-  const { name, details } = destination;
+  const _title = 'Overview';
+  const _basics_title = 'Good to know';
+  const _basics_language = 'Language';
+  const _basics_currency = 'Currency';
+  const { name, details, language, currency } = destination;
   console.log(destination);
   return (
     <div className='details'>
       <div className='container'>
-        <div className='details__header'>{`${name} Overview`}</div>
+        <div className='details__header'>{`${name} ${_title}`}</div>
         <div className='row'>
-          <div className='col-8'>
+          <div className='col-12'>
             <div className='details__description'>{details}</div>
           </div>
+        </div>
+        <div className='details__subheader'>{_basics_title}</div>
+        <div className='row'>
+          <DetailsBasicsBox
+            title={_basics_language}
+            body={language}
+          ></DetailsBasicsBox>
+          <DetailsBasicsBox
+            title={_basics_currency}
+            body={currency}
+          ></DetailsBasicsBox>
         </div>
       </div>
     </div>
