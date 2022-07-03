@@ -4,6 +4,8 @@ import NavContext from '../context/NavContext';
 import { NAV_TOGGLE } from '../context/types/NavTypes';
 
 export default function Navigation() {
+  const _homePageTitle = 'Home';
+  const _aboutPageTitle = 'About';
   const { state, dispatch } = useContext(NavContext);
   return (
     <>
@@ -14,14 +16,14 @@ export default function Navigation() {
             onClick={() => dispatch({ type: NAV_TOGGLE })}
             to='/'
           >
-            Home
+            {_homePageTitle}
           </NavLink>
           <NavLink
             className='nav__content__link'
             onClick={() => dispatch({ type: NAV_TOGGLE })}
             to='/about'
           >
-            About
+            {_aboutPageTitle}
           </NavLink>
         </div>
       </div>

@@ -8,18 +8,19 @@ import Header from '../layout/Header';
 
 export default function Home() {
   const { dispatch } = useContext(SignModalContext);
-  const title = 'Get Started';
+  const _title = 'Trip With Me';
+  const _startButtonTitle = 'Get Started';
   return (
     <>
       <Helmet>
-        <title>Trip With Me</title>
+        <title>{_title}</title>
       </Helmet>
       <Header>
         <button
           className='btn-start'
           onClick={() => dispatch({ type: OPEN_MODAL, payload: PAYLOAD.login })}
         >
-          {title}
+          {_startButtonTitle}
         </button>
       </Header>
       <SignModal></SignModal>
