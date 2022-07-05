@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import DestinationCard from '../components/DestinationCard';
-import DestinationsContext from '../context/DestinationsContext';
+import DestinationCard from '../../components/DestinationCard';
+import DestinationsContext from '../../context/DestinationsContext';
 
 export default function Destinations() {
   const _title = 'Discover story-worthy travel moments - Trip With Me!';

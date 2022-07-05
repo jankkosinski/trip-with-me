@@ -1,5 +1,5 @@
 import React from 'react';
-import DetailsBasicsBox from '../components/DetailsBasicsBox';
+import DetailsBasicsBox from '../../components/DetailsBasicsBox';
 
 export default function DetailsOverview({ destination }) {
   const _title = 'Overview';
