@@ -17,7 +17,6 @@ export default function Details() {
   const destinationCities = cities.filter(
     (city) => city.destinationId === destinationData.id
   );
-  console.log(destinationCities);
   return (
     <>
       <Helmet>
@@ -31,7 +30,10 @@ export default function Details() {
         logo={''}
       ></Header>
       <DetailsOverview destination={destinationData}></DetailsOverview>
-      <Cities></Cities>
+      <Cities
+        destination={destinationData.name}
+        cities={destinationCities}
+      ></Cities>
     </>
   );
 }
