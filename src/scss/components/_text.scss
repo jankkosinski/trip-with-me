@@ -1,0 +1,14 @@
+.text {
+  &__uppercase {
+    text-transform: uppercase;
+    &--first-letter {
+      text-transform: lowercase;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__lowercase {
+    text-transform: lowercase;
+  }
+}

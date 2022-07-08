@@ -2,16 +2,20 @@ import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import DestinationsContext from '../context/DestinationsContext';
-import DetailsOverview from '../layout/DetailsOverview';
 import Header from '../layout/Header';
+import Cities from '../layout/sections/Cities';
+import DetailsOverview from '../layout/sections/DetailsOverview';
 
 export default function Details() {
   const { id } = useParams();
   const {
-    state: { destinations },
+    state: { destinations, cities },
   } = useContext(DestinationsContext);
   const destinationData = destinations.find(
     (destination) => destination.id === parseInt(id)
+  );
+  const destinationCities = cities.filter(
+    (city) => city.destinationId === destinationData.id
   );
   return (
     <>
@@ -26,6 +30,10 @@ export default function Details() {
         logo={''}
       ></Header>
       <DetailsOverview destination={destinationData}></DetailsOverview>
+      <Cities
+        destination={destinationData.name}
+        cities={destinationCities}
+      ></Cities>
     </>
   );
 }
