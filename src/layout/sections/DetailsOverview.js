@@ -7,7 +7,6 @@ export default function DetailsOverview({ destination }) {
   const _basics_language = 'Language';
   const _basics_currency = 'Currency';
   const { name, details, language, currency } = destination;
-  console.log(destination);
   return (
     <div className='details'>
       <div className='container'>
