@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import DestinationsContext from '../context/DestinationsContext';
 import Header from '../layout/Header';
+import Cities from '../layout/sections/Cities';
 import DetailsOverview from '../layout/sections/DetailsOverview';
 
 export default function Details() {
@@ -30,6 +31,7 @@ export default function Details() {
         logo={''}
       ></Header>
       <DetailsOverview destination={destinationData}></DetailsOverview>
+      <Cities></Cities>
     </>
   );
 }
