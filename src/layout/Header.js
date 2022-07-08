@@ -1,19 +1,27 @@
-export default function Header({ children }) {
-  const video_path = '/assets/videos/header.mp4';
-  const poster_path = '/assets/images/header_image.png';
-  const logo = '/assets/icons/logo.png';
-  const title = 'We are travel friends';
-  const intro_text =
+export default function Header({
+  title,
+  intro_text,
+  video_path,
+  poster_path,
+  logo,
+  children,
+}) {
+  const _title = title ?? 'We are travel friends';
+  const _intro_text =
+    intro_text ??
     'Come and join us we travel the most famous and beautiful places in the world';
+  const _video_path = video_path ?? '/assets/videos/header.mp4';
+  const _poster_path = poster_path ?? '/assets/images/header_image.png';
+  const _logo = logo ?? '/assets/icons/logo.png';
   return (
     <div className='header'>
       <div className='contain pr'>
-        <img className='header__logo' src={logo} alt='' />
+        <img className='header__logo' src={_logo} alt='' />
       </div>
       <video
         className='header__video'
-        poster={process.env.PUBLIC_URL + poster_path}
-        src={process.env.PUBLIC_URL + video_path}
+        poster={process.env.PUBLIC_URL + _poster_path}
+        src={process.env.PUBLIC_URL + _video_path}
         autoPlay
         loop
         muted
@@ -22,8 +30,8 @@ export default function Header({ children }) {
         <div className='container'>
           <div className='header__contents__text'>
             <div className='header__contents__text__child'>
-              <h1 className='header__contents__text__child__h1'>{title}</h1>
-              <p className='header__contents__text__child__p'>{intro_text}</p>
+              <h1 className='header__contents__text__child__h1'>{_title}</h1>
+              <p className='header__contents__text__child__p'>{_intro_text}</p>
               <div className='header__contents__text__child__link'>
                 {children}
               </div>
