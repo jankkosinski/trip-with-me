@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import DestinationsContext from '../context/DestinationsContext';
@@ -17,6 +17,9 @@ export default function Details() {
   const destinationCities = cities.filter(
     (city) => city.destinationId === destinationData.id
   );
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Helmet>
