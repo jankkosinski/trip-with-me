@@ -30,6 +30,7 @@
     &__text {
       @include utilities.align(flex, center, center, 100vh);
       &__child {
+        padding: 0 2rem;
         &__h1 {
           color: utilities.$white;
           text-transform: uppercase;
