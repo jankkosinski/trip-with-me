@@ -1,8 +1,5 @@
-import React, { useContext } from 'react';
-import ReviewsContext from '../../context/ReviewsContext';
+import React from 'react';
 
-export default function Reviews() {
-  const { state } = useContext(ReviewsContext);
-  console.log(state);
+export default function Reviews({ reviews }) {
   return <div>Reviews</div>;
 }
