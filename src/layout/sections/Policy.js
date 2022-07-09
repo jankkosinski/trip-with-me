@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import PolicyContext from '../../context/PolicyContext';
 
 export default function Policy() {
   const _title = 'We present to you the policy of our site.';
   const _subtitle = `We take care of your comfort and safety by providing a top-notch public forum service on the world's great places. Please read the rules and regulations.`;
+  const { state } = useContext(PolicyContext);
+  console.log(state);
   return (
     <div className='policy'>
       <div className='container'>
