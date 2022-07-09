@@ -7,7 +7,7 @@
   &__content {
     transform: skewY(2deg);
     &__heading {
-      margin-right: 15rem;
+      padding: 1.5rem;
       &--title {
         font-size: 3.5rem;
         font-weight: 900;
@@ -30,6 +30,7 @@
       }
     }
     &__body {
+      margin-top: 1.5rem;
       border: 2px solid utilities.$primary;
       border-radius: 1rem;
       padding: 1.5rem 2rem;
