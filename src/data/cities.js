@@ -143,4 +143,40 @@ export const cities = [
     image: '/assets/images/cities/antalya.jpg',
     destinationId: 8,
   },
+  {
+    id: 25,
+    name: 'Edynburg',
+    image: '/assets/images/cities/edynburg.jpg',
+    destinationId: 1,
+  },
+  {
+    id: 26,
+    name: 'Cardiff',
+    image: '/assets/images/cities/cardiff.jpg',
+    destinationId: 1,
+  },
+  {
+    id: 27,
+    name: 'Glasgow',
+    image: '/assets/images/cities/glasgow.jpg',
+    destinationId: 1,
+  },
+  {
+    id: 27,
+    name: 'Chicago',
+    image: '/assets/images/cities/chicago.jpg',
+    destinationId: 2,
+  },
+  {
+    id: 28,
+    name: 'San Diego',
+    image: '/assets/images/cities/san-diego.jpg',
+    destinationId: 2,
+  },
+  {
+    id: 29,
+    name: 'Filadelfia',
+    image: '/assets/images/cities/filadelfia.jpg',
+    destinationId: 2,
+  },
 ];
