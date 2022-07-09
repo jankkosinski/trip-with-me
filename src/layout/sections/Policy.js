@@ -8,7 +8,6 @@ export default function Policy() {
   const {
     state: { policy: rules },
   } = useContext(PolicyContext);
-  console.log(rules);
   return (
     <div className='policy'>
       <div className='container'>
