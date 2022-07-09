@@ -2,14 +2,10 @@ import React from 'react';
 import { MdPlace } from 'react-icons/md';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
-export default function DestinationCard({
-  destination,
-  size = 'col-3',
-  explore = 1,
-}) {
+export default function DestinationCard({ destination, explore = 1 }) {
   const explore_button = 'Explore';
   return (
-    <div className={`${size} destination`}>
+    <div className='destination'>
       <div className='destination__card'>
         <LazyLoadImage
           className='destination__card__img'

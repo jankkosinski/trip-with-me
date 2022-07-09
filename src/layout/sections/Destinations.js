@@ -22,10 +22,9 @@ export default function Destinations() {
         </div>
         <div className='row'>
           {destinations.map((destination) => (
-            <DestinationCard
-              key={destination.id}
-              destination={destination}
-            ></DestinationCard>
+            <div className='col-3' key={destination.id}>
+              <DestinationCard destination={destination}></DestinationCard>
+            </div>
           ))}
         </div>
       </div>
