@@ -60,6 +60,23 @@
     }
   }
 }
+@mixin animation-collapse(
+  $name,
+  $duration,
+  $function,
+  $height_from,
+  $height_to
+) {
+  animation: $name $duration $function;
+  @keyframes #{$name} {
+    0% {
+      max-height: $height_from;
+    }
+    100% {
+      max-height: $height_to;
+    }
+  }
+}
 @mixin animation-translate(
   $name,
   $duration,
