@@ -5,6 +5,7 @@ import DestinationsContext from '../context/DestinationsContext';
 import Header from '../layout/Header';
 import Cities from '../layout/sections/Cities';
 import DetailsOverview from '../layout/sections/DetailsOverview';
+import Reviews from '../layout/sections/Reviews';
 
 export default function Details() {
   const { id } = useParams();
@@ -37,6 +38,7 @@ export default function Details() {
         destination={destinationData.name}
         cities={destinationCities}
       ></Cities>
+      <Reviews></Reviews>
     </>
   );
 }
