@@ -5,6 +5,7 @@ import SignModalContext from '../context/SignModalContext';
 import { OPEN_MODAL, PAYLOAD } from '../context/types/SignModalTypes';
 import Header from '../layout/Header';
 import Destinations from '../layout/sections/Destinations';
+import Policy from '../layout/sections/Policy';
 
 export default function Home() {
   const { dispatch } = useContext(SignModalContext);
@@ -25,6 +26,7 @@ export default function Home() {
       </Header>
       <SignModal></SignModal>
       <Destinations></Destinations>
+      <Policy></Policy>
     </>
   );
 }
