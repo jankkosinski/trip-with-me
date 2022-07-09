@@ -4,6 +4,7 @@ import NavToggleButton from './components/NavToggleButton';
 import DestinationsProvider from './context/providers/DestinationsProvider';
 import NavProvider from './context/providers/NavProvider';
 import PolicyProvicer from './context/providers/PolicyProvicer';
+import ReviewsProvider from './context/providers/ReviewsProvider';
 import SignModalProvider from './context/providers/SignModalProvider';
 import Navigation from './layout/Navigation';
 import About from './pages/About';
@@ -18,19 +19,21 @@ function App() {
         <NavProvider>
           <PolicyProvicer>
             <DestinationsProvider>
-              <NavToggleButton></NavToggleButton>
-              <Navigation></Navigation>
-              <HelmetProvider>
-                <Routes>
-                  <Route path='/' element={<Home></Home>}></Route>
-                  <Route path='/about' element={<About></About>}></Route>
-                  <Route
-                    path='/details/:id'
-                    element={<Details></Details>}
-                  ></Route>
-                  <Route path='*' element={<NotFound></NotFound>}></Route>
-                </Routes>
-              </HelmetProvider>
+              <ReviewsProvider>
+                <NavToggleButton></NavToggleButton>
+                <Navigation></Navigation>
+                <HelmetProvider>
+                  <Routes>
+                    <Route path='/' element={<Home></Home>}></Route>
+                    <Route path='/about' element={<About></About>}></Route>
+                    <Route
+                      path='/details/:id'
+                      element={<Details></Details>}
+                    ></Route>
+                    <Route path='*' element={<NotFound></NotFound>}></Route>
+                  </Routes>
+                </HelmetProvider>
+              </ReviewsProvider>
             </DestinationsProvider>
           </PolicyProvicer>
         </NavProvider>

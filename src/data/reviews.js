@@ -1,4 +1,4 @@
-const reviews = [
+export const reviews = [
   {
     id: 1,
     name: 'ali',
@@ -77,4 +77,3 @@ const reviews = [
     destinatios: [1, 3, 4, 5, 6],
   },
 ];
-export default reviews;
