@@ -10,7 +10,7 @@ export default function Reviews({ reviews }) {
         <div className='row'>
           {reviews.map((review) => (
             <div className='col-3' key={review.id}>
-              <ReviewBox data={review}></ReviewBox>
+              <ReviewBox review={review}></ReviewBox>
             </div>
           ))}
         </div>
