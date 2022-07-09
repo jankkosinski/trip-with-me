@@ -14,10 +14,19 @@ export default function CollapsedBox({ header, body }) {
         ) : (
           <BiChevronDown size={'3rem'}></BiChevronDown>
         )}
-
         {header}
       </div>
-      {collapsed ? null : <div className='collapse-box__body'>{body}</div>}
+      <div className='collapse-box__body'>
+        <div
+          className={
+            collapsed
+              ? 'collapse-box__body--closed'
+              : 'collapse-box__body--opened'
+          }
+        >
+          {body}
+        </div>
+      </div>
     </div>
   );
 }
