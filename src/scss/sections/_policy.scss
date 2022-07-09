@@ -30,6 +30,9 @@
       }
     }
     &__body {
+      border: 2px solid utilities.$primary;
+      border-radius: 1rem;
+      padding: 1.5rem 2rem;
     }
   }
 }
