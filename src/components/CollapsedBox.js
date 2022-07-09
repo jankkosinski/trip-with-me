@@ -6,7 +6,9 @@ export default function CollapsedBox({ header, body }) {
   return (
     <div className='collapse-box'>
       <div
-        className='collapse-box__heading'
+        className={`collapse-box__heading ${
+          collapsed ? null : 'collapse-box__heading--active'
+        }`}
         onClick={() => setCollapsed((prevState) => !prevState)}
       >
         {collapsed ? (

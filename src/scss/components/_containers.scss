@@ -23,6 +23,9 @@
     cursor: pointer;
     text-transform: capitalize;
     transition: 0.3s;
+    &--active {
+      color: utilities.$primary;
+    }
     &:hover {
       color: utilities.$primary;
       opacity: 0.8;
