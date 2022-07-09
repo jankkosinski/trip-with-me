@@ -12,12 +12,13 @@ export default function Cities(props) {
           <div className='row'>
             {cities.length > 0 ? (
               cities.map((city) => (
-                <DestinationCard
-                  key={city.id}
-                  destination={city}
-                  size='col-4'
-                  explore={0}
-                ></DestinationCard>
+                <div className='col-4' key={city.id}>
+                  <DestinationCard
+                    destination={city}
+                    size='col-4'
+                    explore={0}
+                  ></DestinationCard>
+                </div>
               ))
             ) : (
               <div className='cities__content__empty'>No data available</div>
