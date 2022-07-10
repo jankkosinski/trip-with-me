@@ -1,5 +1,6 @@
 import React from 'react';
 import { BsStar, BsStarFill } from 'react-icons/bs';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const getRatingStart = (number) => {
   const stars = [];
@@ -16,7 +17,7 @@ export default function ReviewBox({ review }) {
     <div className='review'>
       <div className='review__content'>
         <div className='review__content__heading'>
-          <img
+          <LazyLoadImage
             className='review__content__heading__image'
             src={review.image}
             alt={review.image}
