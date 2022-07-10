@@ -1,6 +1,17 @@
 import React from 'react';
+import { BsStar, BsStarFill } from 'react-icons/bs';
+
+const getRatingStart = (number) => {
+  const stars = [];
+  for (let i = 0; i < 5; i++) {
+    if (i < number) stars.push(<BsStarFill></BsStarFill>);
+    else stars.push(<BsStar></BsStar>);
+  }
+  return stars;
+};
 
 export default function ReviewBox({ review }) {
+  const ratingStars = getRatingStart(review.stars);
   return (
     <div className='review'>
       <div className='review__content'>
@@ -10,7 +21,7 @@ export default function ReviewBox({ review }) {
             src={review.image}
             alt={review.image}
           />
-          <div className='review__content__heading__rating'>{review.stars}</div>
+          <div className='review__content__heading__rating'>{ratingStars}</div>
         </div>
         <div className='review__content__info'>
           <div className='review__content__info__name'>{review.name}</div>
