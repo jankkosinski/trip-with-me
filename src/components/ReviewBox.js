@@ -4,8 +4,8 @@ import { BsStar, BsStarFill } from 'react-icons/bs';
 const getRatingStart = (number) => {
   const stars = [];
   for (let i = 0; i < 5; i++) {
-    if (i < number) stars.push(<BsStarFill></BsStarFill>);
-    else stars.push(<BsStar></BsStar>);
+    if (i < number) stars.push(<BsStarFill size={15}></BsStarFill>);
+    else stars.push(<BsStar size={15}></BsStar>);
   }
   return stars;
 };

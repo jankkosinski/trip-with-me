@@ -20,7 +20,10 @@
         overflow: hidden;
         object-fit: cover;
       }
-      &__stars {
+      &__rating {
+        margin-right: 1rem;
+        color: utilities.$primary;
+        opacity: 0.8;
       }
     }
     &__info {
