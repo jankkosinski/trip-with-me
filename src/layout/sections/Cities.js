@@ -17,6 +17,7 @@ export default function Cities(props) {
                     destination={city}
                     size='col-4'
                     explore={0}
+                    maximize={1}
                   ></DestinationCard>
                 </div>
               ))
