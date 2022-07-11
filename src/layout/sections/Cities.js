@@ -15,7 +15,6 @@ export default function Cities(props) {
                 <div className='col-4' key={city.id}>
                   <DestinationCard
                     destination={city}
-                    size='col-4'
                     explore={0}
                     maximize={1}
                   ></DestinationCard>
