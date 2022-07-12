@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import CityLightBoxContext from '../context/CityLightBoxContext';
 import { CLOSE_LIGHTBOX } from '../context/types/CityLightBoxTypes';
 
@@ -19,7 +20,7 @@ export default function CityLightBox() {
           </button>
         </div>
         <div className='city-lightbox__content__body'>
-          <img src={city.image} alt={city.image} />
+          <LazyLoadImage src={city.image} alt={city.image} />
         </div>
       </div>
     </div>
