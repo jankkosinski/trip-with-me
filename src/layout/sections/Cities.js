@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import DestinationCard from '../../components/DestinationCard';
+import CityLightBoxContext from '../../context/CityLightBoxContext';
+import { OPEN_LIGHTBOX } from '../../context/types/CityLightBoxTypes';
 
 export default function Cities(props) {
   const _title = 'Cities in';
   const { destination, cities } = props;
+  const { dispatch: toggleCityLightBox } = useContext(CityLightBoxContext);
   return (
     <div className='cities'>
       <div className='container'>
@@ -12,7 +15,13 @@ export default function Cities(props) {
           <div className='row'>
             {cities.length > 0 ? (
               cities.map((city) => (
-                <div className='col-4' key={city.id}>
+                <div
+                  className='col-4'
+                  key={city.id}
+                  onClick={() =>
+                    toggleCityLightBox({ type: OPEN_LIGHTBOX, payload: city })
+                  }
+                >
                   <DestinationCard
                     destination={city}
                     explore={0}
