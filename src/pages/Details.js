@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
+import CityLightBox from '../components/CityLightBox';
+import CityLightBoxContext from '../context/CityLightBoxContext';
 import DestinationsContext from '../context/DestinationsContext';
 import ReviewsContext from '../context/ReviewsContext';
 import Header from '../layout/Header';
@@ -16,6 +18,9 @@ export default function Details() {
   const {
     state: { reviews },
   } = useContext(ReviewsContext);
+  const {
+    state: { lightBoxStatus },
+  } = useContext(CityLightBoxContext);
   const destinationData = destinations.find(
     (destination) => destination.id === parseInt(id)
   );
@@ -40,6 +45,7 @@ export default function Details() {
         poster_path={destinationData.bigImage}
         logo={''}
       ></Header>
+      {lightBoxStatus ? <CityLightBox></CityLightBox> : null}
       <DetailsOverview destination={destinationData}></DetailsOverview>
       <Cities
         destination={destinationData.name}

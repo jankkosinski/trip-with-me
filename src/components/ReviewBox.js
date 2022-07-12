@@ -5,8 +5,8 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 const getRatingStart = (number) => {
   const stars = [];
   for (let i = 0; i < 5; i++) {
-    if (i < number) stars.push(<BsStarFill size={15}></BsStarFill>);
-    else stars.push(<BsStar size={15}></BsStar>);
+    if (i < number) stars.push(<BsStarFill key={i} size={15}></BsStarFill>);
+    else stars.push(<BsStar key={i} size={15}></BsStar>);
   }
   return stars;
 };
