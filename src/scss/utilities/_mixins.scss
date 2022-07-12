@@ -49,6 +49,28 @@
     opacity: 0.8;
   }
 }
+@mixin button-text(
+  $text_color,
+  $font_size,
+  $padding_vertical,
+  $padding_horizontal
+) {
+  background: transparent;
+  color: $text_color;
+  text-decoration: none;
+  display: inline-block;
+  font-size: $font_size;
+  font-weight: 400;
+  padding: $padding_vertical $padding_horizontal;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
 @mixin animation-fade-in($name, $duration, $function) {
   animation: $name $duration $function;
   @keyframes #{$name} {
