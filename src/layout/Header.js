@@ -1,3 +1,5 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 export default function Header({
   title,
   intro_text,
@@ -16,7 +18,7 @@ export default function Header({
   return (
     <div className='header'>
       <div className='contain pr'>
-        <img className='header__logo' src={_logo} alt='' />
+        <LazyLoadImage className='header__logo' src={_logo} alt={_logo} />
       </div>
       <video
         className='header__video'
