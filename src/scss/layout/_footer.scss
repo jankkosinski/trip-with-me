@@ -38,4 +38,18 @@
   }
   &__body {
   }
+  &__copyrights {
+    @include utilities.align(flex, center, center, null);
+    width: 100%;
+    margin-top: 5rem;
+    &__text {
+      color: transparent;
+      background: linear-gradient(
+        to right,
+        utilities.$primary,
+        utilities.$secondary
+      );
+      background-clip: text;
+    }
+  }
 }
