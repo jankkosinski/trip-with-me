@@ -1,4 +1,5 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Footer() {
   const _logo = '/assets/icons/logo.png';
@@ -15,7 +16,11 @@ export default function Footer() {
         <div className='row'>
           <div className='col-6'>
             <div className='footer__heading'>
-              <img className='footer__heading__logo' src={_logo} alt='' />
+              <LazyLoadImage
+                className='footer__heading__logo'
+                src={_logo}
+                alt={_logo}
+              />
               <div className='footer__heading__text'>{_heading_text}</div>
             </div>
           </div>
