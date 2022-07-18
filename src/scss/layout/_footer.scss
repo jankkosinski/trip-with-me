@@ -50,6 +50,15 @@
         utilities.$secondary
       );
       background-clip: text;
+      a {
+        color: transparent;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover {
+          color: utilities.$black;
+          opacity: 0.8;
+        }
+      }
     }
   }
 }
