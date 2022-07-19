@@ -37,6 +37,8 @@
     }
   }
   &__body {
+    @include utilities.align(flex, flex-end, center, null);
+    padding: 0 2rem;
   }
   &__copyrights {
     @include utilities.align(flex, center, center, null);
