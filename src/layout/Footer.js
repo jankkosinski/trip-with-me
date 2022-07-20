@@ -33,7 +33,9 @@ export default function Footer() {
               {' '}
               &copy;
               {new Date().getFullYear()} {_copyrights}
-              <a href={_owner_link}>{_owner_name}</a>
+              <a href={_owner_link} target='_blank' rel='noreferrer'>
+                {_owner_name}
+              </a>
               {_greetings}
             </div>
           </div>

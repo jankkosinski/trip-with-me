@@ -27,7 +27,7 @@ export default function FooterLinks() {
         <div className='col-4'>
           <div className='footer__links__header'>{headings.partners}</div>
           <div className='footer__links__body'>
-            <LinksBox links={partners}></LinksBox>
+            <LinksBox links={partners} external={true}></LinksBox>
           </div>
         </div>
         <div className='col-4'>
