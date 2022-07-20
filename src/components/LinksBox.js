@@ -1,7 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function LinksBox({ links, external }) {
+  const location = useLocation();
+  const scrollIfSamePage = (route) => {
+    if (location.pathname === route)
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return links.map((link) => (
     <div key={link.id} className='footer__link'>
       {external ? (
@@ -9,7 +14,9 @@ export default function LinksBox({ links, external }) {
           {link.name}
         </a>
       ) : (
-        <Link to={link.route}>{link.name}</Link>
+        <Link onClick={() => scrollIfSamePage(link.route)} to={link.route}>
+          {link.name}
+        </Link>
       )}
     </div>
   ));
