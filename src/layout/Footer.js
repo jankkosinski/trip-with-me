@@ -26,9 +26,7 @@ export default function Footer() {
             </div>
           </div>
           <div className='col-6'>
-            <div className='footer__body'>
-              <FooterLinks></FooterLinks>
-            </div>
+            <FooterLinks></FooterLinks>
           </div>
           <div className='footer__copyrights'>
             <div className='footer__copyrights__text'>

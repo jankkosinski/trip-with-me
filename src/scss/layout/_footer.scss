@@ -36,10 +36,6 @@
       margin-top: 2rem;
     }
   }
-  &__body {
-    @include utilities.align(flex, flex-end, center, null);
-    padding: 0 2rem;
-  }
   &__copyrights {
     @include utilities.align(flex, center, center, null);
     width: 100%;
@@ -62,5 +58,8 @@
         }
       }
     }
+  }
+  &__links {
+    padding: 0 2rem;
   }
 }

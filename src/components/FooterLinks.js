@@ -1,14 +1,37 @@
 import React, { useContext } from 'react';
 import DestinationsContext from '../context/DestinationsContext';
 import { links } from '../data/links';
+import LinksBox from './LinksBox';
 
 export default function FooterLinks() {
   const {
     state: { destinations },
   } = useContext(DestinationsContext);
 
-  console.log('Destinations:', destinations);
-  console.log('Links:', links);
+  const { headings, pages, partners } = links;
 
-  return <div>FooterLinks</div>;
+  return (
+    <div className='footer__links'>
+      <div className='row'>
+        <div className='col-4'>
+          <div className='footer__links__header'>{headings.pages}</div>
+          <div className='footer__links__body'>
+            <LinksBox links={pages}></LinksBox>
+          </div>
+        </div>
+        <div className='col-4'>
+          <div className='footer__links__header'>{headings.partners}</div>
+          <div className='footer__links__body'>
+            <LinksBox links={partners}></LinksBox>
+          </div>
+        </div>
+        <div className='col-4'>
+          <div className='footer__links__header'>{headings.destinations}</div>
+          <div className='footer__links__body'>
+            <LinksBox links={destinations}></LinksBox>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
