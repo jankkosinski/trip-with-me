@@ -8,6 +8,11 @@ export default function FooterLinks() {
     state: { destinations },
   } = useContext(DestinationsContext);
 
+  const destinationsLinks = destinations.map((destination) => ({
+    id: destination.id,
+    name: destination.name,
+    route: `/details/${destination.id}`,
+  }));
   const { headings, pages, partners } = links;
 
   return (
@@ -28,7 +33,7 @@ export default function FooterLinks() {
         <div className='col-4'>
           <div className='footer__links__header'>{headings.destinations}</div>
           <div className='footer__links__body'>
-            <LinksBox links={destinations}></LinksBox>
+            <LinksBox links={destinationsLinks}></LinksBox>
           </div>
         </div>
       </div>
