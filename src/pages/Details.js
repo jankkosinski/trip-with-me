@@ -5,6 +5,7 @@ import CityLightBox from '../components/CityLightBox';
 import CityLightBoxContext from '../context/CityLightBoxContext';
 import DestinationsContext from '../context/DestinationsContext';
 import ReviewsContext from '../context/ReviewsContext';
+import Footer from '../layout/Footer';
 import Header from '../layout/Header';
 import Cities from '../layout/sections/Cities';
 import DetailsOverview from '../layout/sections/DetailsOverview';
@@ -52,6 +53,7 @@ export default function Details() {
         cities={destinationCities}
       ></Cities>
       <Reviews reviews={destinationReviews}></Reviews>
+      <Footer></Footer>
     </>
   );
 }
