@@ -17,8 +17,8 @@ export default function CompanyInformations() {
           </div>
           <div className='col-6'>
             <div className='company_informations__body'>
-              <div className='company_informations__body__header'>{_title}</div>
-              <div className='company_informations__body__description'>
+              <div className='text__header'>{_title}</div>
+              <div className='company_informations__body__text'>
                 {_description}
               </div>
             </div>
