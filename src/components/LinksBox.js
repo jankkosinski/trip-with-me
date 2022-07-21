@@ -1,4 +1,5 @@
 import React from 'react';
+import { BiChevronRight } from 'react-icons/bi';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function LinksBox({ links, external }) {
@@ -10,13 +11,19 @@ export default function LinksBox({ links, external }) {
   return links.map((link) => (
     <div key={link.id} className='footer__link'>
       {external ? (
-        <a href={link.route} target='_blank' rel='noreferrer'>
-          {link.name}
-        </a>
+        <>
+          <BiChevronRight></BiChevronRight>
+          <a href={link.route} target='_blank' rel='noreferrer'>
+            {link.name}
+          </a>
+        </>
       ) : (
-        <Link onClick={() => scrollIfSamePage(link.route)} to={link.route}>
-          {link.name}
-        </Link>
+        <>
+          <BiChevronRight></BiChevronRight>
+          <Link onClick={() => scrollIfSamePage(link.route)} to={link.route}>
+            {link.name}
+          </Link>
+        </>
       )}
     </div>
   ));
