@@ -1,4 +1,5 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function CompanyInformations() {
   const _title = 'About';
@@ -9,7 +10,7 @@ export default function CompanyInformations() {
       <div className='container'>
         <div className='row'>
           <div className='col-6'>
-            <img
+            <LazyLoadImage
               className='company_informations__image'
               src={_about_image}
               alt={_about_image}
