@@ -11,7 +11,7 @@ export default function Cities(props) {
     <div className='cities'>
       <div className='container'>
         <div className='cities__content'>
-          <div className='details__subheader'>{`${_title} ${destination}`}</div>
+          <div className='text__subheader'>{`${_title} ${destination}`}</div>
           <div className='row'>
             {cities.length > 0 ? (
               cities.map((city) => (
