@@ -60,12 +60,37 @@
     }
   }
   &__links {
+    margin-top: 5rem;
     padding: 0 2rem;
     &__header {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      letter-spacing: 0.2rem;
     }
     &__body {
+      @include utilities.flex(
+        flex,
+        column,
+        0.5rem,
+        flex-start,
+        flex-start,
+        null
+      );
+      padding: 1rem 0;
     }
   }
   &__link {
+    a {
+      @include utilities.flex(flex, row, 0.2rem, center, flex-start, null);
+      font-size: 1.2rem;
+      text-decoration: none;
+      text-transform: capitalize;
+      color: utilities.$grey;
+      transition: 0.5s;
+      &:hover {
+        color: utilities.$primary;
+        opacity: 0.8;
+      }
+    }
   }
 }

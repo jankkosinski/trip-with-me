@@ -11,19 +11,13 @@ export default function LinksBox({ links, external }) {
   return links.map((link) => (
     <div key={link.id} className='footer__link'>
       {external ? (
-        <>
-          <BiChevronRight></BiChevronRight>
-          <a href={link.route} target='_blank' rel='noreferrer'>
-            {link.name}
-          </a>
-        </>
+        <a href={link.route} target='_blank' rel='noreferrer'>
+          <BiChevronRight size={'1.4rem'}></BiChevronRight> {link.name}
+        </a>
       ) : (
-        <>
-          <BiChevronRight></BiChevronRight>
-          <Link onClick={() => scrollIfSamePage(link.route)} to={link.route}>
-            {link.name}
-          </Link>
-        </>
+        <Link onClick={() => scrollIfSamePage(link.route)} to={link.route}>
+          <BiChevronRight size={'1.4rem'}></BiChevronRight> {link.name}
+        </Link>
       )}
     </div>
   ));
