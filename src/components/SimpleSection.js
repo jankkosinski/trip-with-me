@@ -13,8 +13,10 @@ export default function SimpleSection({
           {revert_order ? <div className='col-6'>{children}</div> : null}
           <div className='col-6'>
             <div className='simple-section__body'>
-              <div className='text__header'>{title}</div>
-              <div className='simple-section__body__text'>{description}</div>
+              <div className='text__header animation'>{title}</div>
+              <div className='simple-section__body__text animation'>
+                {description}
+              </div>
             </div>
           </div>
           {!revert_order ? <div className='col-6'>{children}</div> : null}

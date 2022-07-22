@@ -6,7 +6,7 @@ export default function Reviews({ reviews }) {
   return (
     <div className='reviews'>
       <div className='container'>
-        <div className='text__subheader'>{_title}</div>
+        <div className='text__subheader animation'>{_title}</div>
         <div className='row'>
           {reviews.map((review) => (
             <div className='col-3' key={review.id}>

@@ -12,7 +12,7 @@ export default function Destinations() {
   return (
     <div className='destinations'>
       <div className='container'>
-        <div className='row'>
+        <div className='row animation'>
           <div className='col-6 destinations__heading'>
             <h3 className='destinations__heading__body'>{_title}</h3>
           </div>
@@ -22,7 +22,7 @@ export default function Destinations() {
         </div>
         <div className='row'>
           {destinations.map((destination) => (
-            <div className='col-3' key={destination.id}>
+            <div className='col-3 animation' key={destination.id}>
               <DestinationCard destination={destination}></DestinationCard>
             </div>
           ))}

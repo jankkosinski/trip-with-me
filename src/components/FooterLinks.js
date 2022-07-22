@@ -18,19 +18,19 @@ export default function FooterLinks() {
   return (
     <div className='footer__links'>
       <div className='row'>
-        <div className='col-4'>
+        <div className='col-4 animation'>
           <div className='footer__links__header'>{headings.pages}</div>
           <div className='footer__links__body'>
             <LinksBox links={pages}></LinksBox>
           </div>
         </div>
-        <div className='col-4'>
+        <div className='col-4 animation'>
           <div className='footer__links__header'>{headings.partners}</div>
           <div className='footer__links__body'>
             <LinksBox links={partners} external={true}></LinksBox>
           </div>
         </div>
-        <div className='col-4'>
+        <div className='col-4 animation'>
           <div className='footer__links__header'>{headings.destinations}</div>
           <div className='footer__links__body'>
             <LinksBox links={destinationsLinks}></LinksBox>

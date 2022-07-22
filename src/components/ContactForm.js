@@ -19,7 +19,7 @@ export default function ContactForm() {
   return (
     <form className='contact_form fade-form' onSubmit={submitRequest}>
       <div className='contact_form__body'>
-        <div className='control'>
+        <div className='control animation'>
           <input
             type='text'
             name='name'
@@ -31,7 +31,7 @@ export default function ContactForm() {
             value={state.name}
           />
         </div>
-        <div className='control'>
+        <div className='control animation'>
           <input
             type='email'
             name='email'
@@ -43,7 +43,7 @@ export default function ContactForm() {
             value={state.email}
           />
         </div>
-        <div className='control'>
+        <div className='control animation'>
           <textarea
             type='text'
             name='text'
@@ -55,7 +55,7 @@ export default function ContactForm() {
             value={state.text}
           />
         </div>
-        <div className='control'>
+        <div className='control animation'>
           <button type='submit' className='btn-submit control__full'>
             {_submit}
           </button>

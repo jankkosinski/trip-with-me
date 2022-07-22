@@ -14,8 +14,10 @@ export default function Policy() {
         <div className='row policy__content'>
           <div className='col-6'>
             <div className='policy__content__heading'>
-              <div className='policy__content__heading--title'>{_title}</div>
-              <div className='policy__content__heading--subtitle'>
+              <div className='policy__content__heading--title animation'>
+                {_title}
+              </div>
+              <div className='policy__content__heading--subtitle animation'>
                 {_subtitle}
               </div>
             </div>

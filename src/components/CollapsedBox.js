@@ -4,7 +4,7 @@ import { BiChevronDown, BiChevronRight } from 'react-icons/bi';
 export default function CollapsedBox({ header, body }) {
   const [collapsed, setCollapsed] = useState(1);
   return (
-    <div className='collapse-box'>
+    <div className='collapse-box animation'>
       <div
         className={`collapse-box__heading ${
           collapsed ? null : 'collapse-box__heading--active'

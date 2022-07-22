@@ -14,7 +14,7 @@ const getRatingStart = (number) => {
 export default function ReviewBox({ review }) {
   const ratingStars = getRatingStart(review.stars);
   return (
-    <div className='review'>
+    <div className='review animation'>
       <div className='review__content'>
         <div className='review__content__heading'>
           <LazyLoadImage
