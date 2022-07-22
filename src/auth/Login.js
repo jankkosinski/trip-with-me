@@ -15,13 +15,13 @@ export default function Login() {
     password: '',
   });
   const { dispatch } = useContext(SignModalContext);
-  const submitRegisterForm = (e) => {
+  const submitLoginForm = (e) => {
     e.preventDefault();
     console.log(state);
     dispatch({ type: CLOSE_MODAL });
   };
   return (
-    <form className='fade-form' onSubmit={submitRegisterForm}>
+    <form className='fade-form' onSubmit={submitLoginForm}>
       <div className='modal__heading'>
         <h3>{title}</h3>
       </div>
