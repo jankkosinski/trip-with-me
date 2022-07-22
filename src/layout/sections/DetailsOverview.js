@@ -10,13 +10,13 @@ export default function DetailsOverview({ destination }) {
   return (
     <div className='details'>
       <div className='container'>
-        <div className='details__header'>{`${name} ${_title}`}</div>
+        <div className='text__header'>{`${name} ${_title}`}</div>
         <div className='row'>
           <div className='col-12'>
             <div className='details__description'>{details}</div>
           </div>
         </div>
-        <div className='details__subheader'>{_basics_title}</div>
+        <div className='text__subheader'>{_basics_title}</div>
         <div className='row'>
           <DetailsBasicsBox
             title={_basics_language}
