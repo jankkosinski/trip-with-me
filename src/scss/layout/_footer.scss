@@ -17,16 +17,6 @@
       opacity: 0.5;
       content: '';
     }
-    &:after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 2px;
-      width: 100%;
-      background: linear-gradient(to right, transparent, utilities.$secondary);
-      opacity: 0.5;
-      content: '';
-    }
     &__logo {
       max-height: 10rem;
     }
@@ -40,6 +30,18 @@
     @include utilities.align(flex, center, center, null);
     width: 100%;
     margin-top: 5rem;
+    padding-bottom: 4rem;
+    position: relative;
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(to right, transparent, utilities.$secondary);
+      opacity: 0.5;
+      content: '';
+    }
     &__text {
       color: transparent;
       background: linear-gradient(

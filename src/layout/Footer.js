@@ -12,7 +12,7 @@ export default function Footer() {
   const _greetings = '. Greetings to all visitors!';
 
   return (
-    <div className='footer'>
+    <div className='footer animation'>
       <div className='container'>
         <div className='row'>
           <div className='col-6'>
