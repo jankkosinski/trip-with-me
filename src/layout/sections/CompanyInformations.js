@@ -13,7 +13,7 @@ export default function CompanyInformations() {
       revert_order={true}
     >
       <LazyLoadImage
-        className='company_informations__image'
+        className='company_informations__image animation'
         src={_about_image}
         alt={_about_image}
       />
