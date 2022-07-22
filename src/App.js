@@ -1,6 +1,7 @@
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavToggleButton from './components/NavToggleButton';
+import AnimationsProvider from './context/providers/AnimationsProvider';
 import CityLightBoxProvider from './context/providers/CityLightBoxProvider';
 import DestinationsProvider from './context/providers/DestinationsProvider';
 import NavProvider from './context/providers/NavProvider';
@@ -23,23 +24,25 @@ function App() {
             <DestinationsProvider>
               <CityLightBoxProvider>
                 <ReviewsProvider>
-                  <NavToggleButton></NavToggleButton>
-                  <Navigation></Navigation>
-                  <HelmetProvider>
-                    <Routes>
-                      <Route path='/' element={<Home></Home>}></Route>
-                      <Route path='/about' element={<About></About>}></Route>
-                      <Route
-                        path='/contact'
-                        element={<Contact></Contact>}
-                      ></Route>
-                      <Route
-                        path='/details/:id'
-                        element={<Details></Details>}
-                      ></Route>
-                      <Route path='*' element={<NotFound></NotFound>}></Route>
-                    </Routes>
-                  </HelmetProvider>
+                  <AnimationsProvider>
+                    <NavToggleButton></NavToggleButton>
+                    <Navigation></Navigation>
+                    <HelmetProvider>
+                      <Routes>
+                        <Route path='/' element={<Home></Home>}></Route>
+                        <Route path='/about' element={<About></About>}></Route>
+                        <Route
+                          path='/contact'
+                          element={<Contact></Contact>}
+                        ></Route>
+                        <Route
+                          path='/details/:id'
+                          element={<Details></Details>}
+                        ></Route>
+                        <Route path='*' element={<NotFound></NotFound>}></Route>
+                      </Routes>
+                    </HelmetProvider>
+                  </AnimationsProvider>
                 </ReviewsProvider>
               </CityLightBoxProvider>
             </DestinationsProvider>
