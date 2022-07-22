@@ -18,17 +18,19 @@ export default function Footer() {
           <div className='col-6'>
             <div className='footer__heading'>
               <LazyLoadImage
-                className='footer__heading__logo'
+                className='footer__heading__logo animation'
                 src={_logo}
                 alt={_logo}
               />
-              <div className='footer__heading__text'>{_heading_text}</div>
+              <div className='footer__heading__text animation'>
+                {_heading_text}
+              </div>
             </div>
           </div>
           <div className='col-6'>
             <FooterLinks></FooterLinks>
           </div>
-          <div className='footer__copyrights'>
+          <div className='footer__copyrights animation'>
             <div className='footer__copyrights__text'>
               {' '}
               &copy;
