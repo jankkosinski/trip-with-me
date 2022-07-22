@@ -10,6 +10,11 @@ export default function ContactForm() {
   const submitRequest = (e) => {
     e.preventDefault();
     console.log(state);
+    setState({
+      name: '',
+      email: '',
+      text: '',
+    });
   };
   return (
     <form className='contact_form fade-form' onSubmit={submitRequest}>
