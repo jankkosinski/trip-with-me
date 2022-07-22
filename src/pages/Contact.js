@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Footer from '../layout/Footer';
 import Header from '../layout/Header';
+import ContactDetails from '../layout/sections/ContactDetails';
 
 export default function Contact() {
   const _title = 'Contact';
@@ -12,6 +13,7 @@ export default function Contact() {
         <title>{_title}</title>
       </Helmet>
       <Header title={_title} intro_text={_intro_text}></Header>
+      <ContactDetails></ContactDetails>
       <Footer></Footer>
     </>
   );
