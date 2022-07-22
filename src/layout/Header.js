@@ -1,4 +1,5 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header({
   title,
@@ -15,11 +16,23 @@ export default function Header({
   const _video_path = video_path ?? '/assets/videos/header.mp4';
   const _poster_path = poster_path ?? '/assets/images/header_image.png';
   const _logo = logo ?? '/assets/icons/logo.png';
+  const navigate = useNavigate();
+  const navigateHome = () => {
+    navigate('/');
+    window.scrollTo(0, 0);
+  };
   return (
     <div className='header'>
-      <div className='contain pr'>
-        <LazyLoadImage className='header__logo' src={_logo} alt={_logo} />
-      </div>
+      {_logo ? (
+        <div className='container pr'>
+          <LazyLoadImage
+            className='header__logo'
+            onClick={navigateHome}
+            src={_logo}
+            alt={_logo}
+          />
+        </div>
+      ) : null}
       <video
         className='header__video'
         poster={process.env.PUBLIC_URL + _poster_path}

@@ -17,6 +17,9 @@
       left: 2rem;
       width: 100px;
     }
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.5;
   }
   &__video {
     @include utilities.position(absolute, 0, 0, null, null, 100%, 100%);
