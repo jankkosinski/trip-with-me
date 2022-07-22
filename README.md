@@ -1,21 +1,21 @@
 # Trip With Me
 
-This is exapmle project of React application.
-Trip With Me is an multi pages application which is based on such specific tools like Context API, Flexbox and SASS/SCSS.
+This is exapmle project of React application, focused mainly on design and jest frontend. Prepared with UI/UX rules.
+Trip With Me is an SPA application which is based on such specific tools like CSS and SASS/SCSS, React, React Hooks, Context API.
 This project provides a responsive website that provides information about tours and places to visit.
 
-Project is prepared only with html, css and React. There is no external frameworks for UI. It shows a lot of design topics and information how to screate structure for that applications.
+Project is a React application. There is no external frameworks for UI. It shows a lot of design topics and information how to screate structure for that applications. This project was created generally only for learning. There is no comercial usage, no profit from that project anywhere.
 
 What can you find in this project:
 
+- Vanilla JavaScript features
 - Learn React JS library from beginners level
 - Context API from beginners level
 - CSS Flexbox from beginners level
 - Sass or Scss from beginners to advanced
 - React Routing
-- Vanilla JavaScript scroll animations
-- Accordion with pure React js
-- Image lazy loading with React js
+- Accordion with pure React JS
+- Image lazy loading with React JS
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
