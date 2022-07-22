@@ -1,31 +1,9 @@
 @use '../utilities';
 
 .company_informations {
-  margin: 2rem 0;
-  padding: 2rem 5rem;
   &__image {
     width: 100%;
     overflow: hidden;
     object-fit: cover;
-  }
-  &__body {
-    @include utilities.flex(flex, column, 0.2rem, center, flex-start, null);
-    height: 100%;
-    padding: 2rem 4rem;
-    &__text {
-      position: relative;
-      color: utilities.$grey;
-      font-size: 1.4rem;
-      &:before {
-        position: absolute;
-        top: -1rem;
-        left: 0;
-        height: 2px;
-        width: 100%;
-        background: linear-gradient(to right, utilities.$primary, transparent);
-        opacity: 0.5;
-        content: '';
-      }
-    }
   }
 }
