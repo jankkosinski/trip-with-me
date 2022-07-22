@@ -6,6 +6,7 @@ import { NAV_TOGGLE } from '../context/types/NavTypes';
 export default function Navigation() {
   const _homePageTitle = 'Home';
   const _aboutPageTitle = 'About';
+  const _contactPageTitle = 'Contact';
   const { state, dispatch } = useContext(NavContext);
   const navigateAndScroll = () => {
     dispatch({ type: NAV_TOGGLE });
@@ -28,6 +29,13 @@ export default function Navigation() {
             to='/about'
           >
             {_aboutPageTitle}
+          </NavLink>
+          <NavLink
+            className='nav__content__link'
+            onClick={navigateAndScroll}
+            to='/contact'
+          >
+            {_contactPageTitle}
           </NavLink>
         </div>
       </div>
