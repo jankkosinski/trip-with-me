@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function ContactForm() {
-  const _submit = 'Send';
+  const _submit = 'Send request';
   const [state, setState] = useState({
     name: '',
     email: '',
