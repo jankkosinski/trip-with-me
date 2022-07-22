@@ -9,6 +9,7 @@ import ReviewsProvider from './context/providers/ReviewsProvider';
 import SignModalProvider from './context/providers/SignModalProvider';
 import Navigation from './layout/Navigation';
 import About from './pages/About';
+import Contact from './pages/Contact';
 import Details from './pages/Details';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
@@ -28,6 +29,10 @@ function App() {
                     <Routes>
                       <Route path='/' element={<Home></Home>}></Route>
                       <Route path='/about' element={<About></About>}></Route>
+                      <Route
+                        path='/contact'
+                        element={<Contact></Contact>}
+                      ></Route>
                       <Route
                         path='/details/:id'
                         element={<Details></Details>}
