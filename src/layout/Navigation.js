@@ -7,7 +7,7 @@ export default function Navigation() {
   const _homePageTitle = 'Home';
   const _aboutPageTitle = 'About';
   const { state, dispatch } = useContext(NavContext);
-  const navigateToHome = () => {
+  const navigateAndScroll = () => {
     dispatch({ type: NAV_TOGGLE });
     window.scrollTo(0, 0);
   };
@@ -17,14 +17,14 @@ export default function Navigation() {
         <div className={`nav__content ${state ? '' : 'nav__content--closed'}`}>
           <NavLink
             className='nav__content__link'
-            onClick={navigateToHome}
+            onClick={navigateAndScroll}
             to='/'
           >
             {_homePageTitle}
           </NavLink>
           <NavLink
             className='nav__content__link'
-            onClick={() => dispatch({ type: NAV_TOGGLE })}
+            onClick={navigateAndScroll}
             to='/about'
           >
             {_aboutPageTitle}

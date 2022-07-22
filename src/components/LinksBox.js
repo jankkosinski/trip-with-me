@@ -7,6 +7,7 @@ export default function LinksBox({ links, external }) {
   const scrollIfSamePage = (route) => {
     if (location.pathname === route)
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    else window.scrollTo(0, 0);
   };
   return links.map((link) => (
     <div key={link.id} className='footer__link'>
