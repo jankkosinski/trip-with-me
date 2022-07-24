@@ -24,14 +24,12 @@ export default function Header({
   return (
     <div className='header'>
       {_logo ? (
-        <div className='container pr'>
-          <LazyLoadImage
-            className='header__logo'
-            onClick={navigateHome}
-            src={_logo}
-            alt={_logo}
-          />
-        </div>
+        <LazyLoadImage
+          className='header__logo'
+          onClick={navigateHome}
+          src={_logo}
+          alt={_logo}
+        />
       ) : null}
       <video
         className='header__video'

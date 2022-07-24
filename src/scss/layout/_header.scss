@@ -6,7 +6,7 @@
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   overflow: hidden;
   &__logo {
-    @include utilities.position(absolute, 3rem, 5rem, null, null, 200px, auto);
+    @include utilities.position(absolute, 3rem, 2rem, null, null, 180px, auto);
     @include utilities.responsive(medium) {
       top: 2rem;
       left: 3rem;
